@@ -1,7 +1,7 @@
 # Exercises
 - Maybe it is homework.
 ## Content
-- [ ] C Language Basic
+- [x] C Language Basic
 - [ ] Program Control Structure
 - [ ] Array
 - [ ] Function
