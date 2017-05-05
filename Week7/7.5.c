@@ -25,13 +25,14 @@ int main()
 	printf("Input a char:");
 	scanf("%c", &c);
 	delchar(s, c);
+	printf("After deleted,the string is:%s", s);
 	return 0;
 }
 void delchar(char s[], char c)
 {
-	printf("After deleted,the string is:");
-	int i;
-	for (i = 0; i < strlen(s); i++)
+	int i, j;
+	for (i = j = 0; s[i] != '\0'; i++)
 		if (s[i] != c)
-			printf("%c", s[i]);
+			s[j++] = s[i];
+	s[j] = '\0';
 }
