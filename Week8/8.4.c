@@ -36,13 +36,13 @@ int main()
 		printf("Input the name,birthday,number of the %d friend:", i + 1);
 		scanf("%s%d%s", a[i].name, &a[i].birthday, a[i].number);
 	}
-	for (i = 0; i < n; i++)
-		for (j = 0; j < n - 1 - i; j++)
-			if (a[i].birthday > a[i + 1].birthday)
+	for (i = 1; i < n; i++)
+		for (j = 0; j < n - i; j++)
+			if (a[j].birthday > a[j + 1].birthday)
 			{
-				temp = a[i];
-				a[i] = a[i + 1];
-				a[i + 1] = temp;
+				temp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = temp;
 			}
 	for (i = 0; i < n; i++)
 		printf("%s %d %s\n", a[i].name, a[i].birthday, a[i].number);
